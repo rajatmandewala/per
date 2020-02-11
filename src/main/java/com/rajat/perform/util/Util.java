@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 import org.springframework.stereotype.Component;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 @Component
 public class Util {
@@ -11,6 +13,7 @@ public class Util {
 	
 	
 	public String generateInsertQuery(String str) {
+<<<<<<< HEAD
 	String s="IF(a.Year7='NA',a.Year7,CONCAT('<a href=javascript:void(0) onclick=getBonusDividend(\"',a.SCHCODE,'\"',',',\"'YEAR_7'\",',',\"'\"+entityBean.getAsOnDate()+\"'\", ')>',a.Year7,'</a>')) as Year7";
 		
 		
@@ -28,6 +31,12 @@ public class Util {
 		    	g=g+s.replace("a.Year7", l1.get(i).trim()).replace("YEAR_7",l2.get(i).trim()).replace("Year7", l2.get(i).trim())+", \n";
 		    }
 		    System.out.println(g);
+=======
+		String startDateString = "08-12-2017";
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+		DateTimeFormatter formatter2 = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+		System.out.println(LocalDate.parse(startDateString, formatter).format(formatter2));
+>>>>>>> 0543a42cfd00aba9781b22ef4d0730435ab75532
 		
 		
 		
