@@ -31,9 +31,11 @@ public class Util {
 		    }
 		    System.out.println(g);
 
+		SELECT '2020-02-29' fromDate,  IF('2020-02-29'=LAST_DAY('2020-02-29'),
+LAST_DAY(DATE_ADD('2020-02-29', INTERVAL -1 MONTH))
+,DATE_ADD('2020-02-29', INTERVAL -1 month))as toDate from dual;
 		
-		
-		return "rajat";
+		return "";
 	}
 
 }
